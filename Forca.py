@@ -28,18 +28,19 @@ def mostrarForca(palavra, vidas):
     print(vidas)
     for i in list(palavra):
         if i != " " and i != "-":
-            nova_palavra = nova_palavra.replace(i, "_")
+            nova_palavra = nova_palavra.replace(i, "_ ")
     
     return nova_palavra
 
 # Atualiza a forca a cada jogada
 def atualizarForca(palavra, acertos, nova_palavra):
     nova_palavra = ''
+
     for i in list(palavra):
         if i in acertos or i == " " or i == "-":
             nova_palavra += i
         else:
-            nova_palavra += "_"
+            nova_palavra += "_ "
 
     if nova_palavra != palavra:
         return nova_palavra
